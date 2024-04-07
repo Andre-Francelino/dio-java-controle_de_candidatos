@@ -6,11 +6,29 @@ public class ProcessoSeletivo {
 	
 	public static void main(String[] args) {
 		selecaoCandidatos();
+		imprimirSelecionados();
+	}
+	
+	static void imprimirSelecionados() {
+		String[] candidatos = {"JAMES", "JULIA", "KAREN", "ROBERTA",  "PAULO"};
+		
+		System.out.println("Imprimindo a lista de candidatos informando o indice do elemento");
+		
+		for(int indice = 0; indice < candidatos.length; indice ++) {
+			System.out.println("O candidato de nº " + (indice+1) + " é " + candidatos[indice]);
+		}
+		System.out.println("");
+		
+		System.out.println("Forma abreviada de interação ForEach");
+		
+		for(String candidato: candidatos) {
+			System.out.println("O candidato seleconado foi " + candidato);
+		}
 	}
 	
 	static void selecaoCandidatos() {
 		
-		String [] candidatos = {"JAMES", "JULIA", "KAREN", "ROBERTA",  "PAULO", "AUGUSTO", "MONICA", "FRANK", "MIRELLY", "DANIELA"};
+		String [] candidatos = {"JAMES", "JULIA", "KAREN", "ROBERTA", "PAULO", "AUGUSTO", "MONICA", "FRANK", "MIRELLY", "DANIELA"};
 		
 		int candidatosSelecionados = 0;
 		int candidatosAtual = 0;
@@ -28,6 +46,7 @@ public class ProcessoSeletivo {
 			}
 			candidatosAtual++;
 		}
+		System.out.println("");
 	}
 	
 	static double valorPretendido() {
